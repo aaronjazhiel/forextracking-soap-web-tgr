@@ -61,26 +61,26 @@ public class CountryEndpoint {
     
     public TG7065O crear(TG7065O obj1, int sec) {
     	
-    	obj1.setCODIDIVI("CODIDIVI response "+sec);
-    	obj1.setCODPROOP("CODPROOP Response "+sec);
-    	obj1.setDESPRODO("DESPRODO response "+sec);
-    	obj1.setDIVNOMVEN("DIVNOMVEN response "+sec);
-    	obj1.setDIVPRIMA("DIVPRIMA response "+sec);
-    	obj1.setFECALTA("FECALTA response "+sec);
-    	obj1.setFECVTO("FECVTO response "+sec);
-    	obj1.setGLOBALID("GLOBALID response "+sec);
-    	obj1.setIMPNOMINAL("IMPNOMINAL response "+sec);
-    	obj1.setIMPNOMVEN("IMPNOMVEN response "+sec);
-    	obj1.setIMPPRIMA("IMPPRIMA response "+sec);
-    	obj1.setINDCALPUT("INDCALPUT response "+sec);
-    	obj1.setINDCOMP("INDCOMP response "+sec);
-    	obj1.setNIVBARR1("NIVBARR1 response "+sec);
-    	obj1.setNIVBARR2("NIVBARR2 response "+sec);
-    	obj1.setNUMESTRAT("NUMESTRAT response "+sec);
-    	obj1.setNUMOPERA("NUMOPERA response "+sec);
-    	obj1.setTIPBARR1("TIPBARR1 response "+sec);
-    	obj1.setTIPBARR2("TIPBARR2 response "+sec);
-    	obj1.setTRANOPE("TRANOPE response "+sec);
+    	obj1.setCODIDIVI("123"+sec);
+    	obj1.setCODPROOP("3565"+sec);
+    	obj1.setDESPRODO("3454.35"+sec);
+    	obj1.setDIVNOMVEN("4545.4"+sec);
+    	obj1.setDIVPRIMA("4545.45"+sec);
+    	obj1.setFECALTA("2019-05-0"+sec);
+    	obj1.setFECVTO("2019-05-1"+sec);
+    	obj1.setGLOBALID("1000000000373480"+sec);
+    	obj1.setIMPNOMINAL("1538461.5"+sec);
+    	obj1.setIMPNOMVEN("854700.8"+sec);
+    	obj1.setIMPPRIMA("343.34"+sec);
+    	obj1.setINDCALPUT("23.3"+sec);
+    	obj1.setINDCOMP("23.3"+sec);
+    	obj1.setNIVBARR1("1.2"+sec);
+    	obj1.setNIVBARR2("1.6"+sec);
+    	obj1.setNUMESTRAT("4324"+sec);
+    	obj1.setNUMOPERA("3434.33"+sec);
+    	obj1.setTIPBARR1("1.7"+sec);
+    	obj1.setTIPBARR2("1.5"+sec);
+    	obj1.setTRANOPE("23232.3"+sec);
     	
     	return obj1;
     }
