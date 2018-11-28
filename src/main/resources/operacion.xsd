@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getTG7065IRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TG7065I" type="tns:TG7065I" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <xs:complexType name="TG7065I">
+        <xs:sequence>
+            <xs:element name="OPCION" type="xs:string" />
+            <xs:element name="CODENTID" type="xs:string" />
+            <xs:element name="NIF" type="xs:string" />
+            <xs:element name="NUMPERSONA" type="xs:string" />
+            <xs:element name="NUMOPERA" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    
+
+</xs:schema>

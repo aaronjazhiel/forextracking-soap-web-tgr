@@ -1,0 +1,87 @@
+package com.ab.soap;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ws.server.endpoint.annotation.Endpoint;
+import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
+import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+
+import io.spring.guides.gs_producing_web_service.GetTG7065IRequest;
+import io.spring.guides.gs_producing_web_service.GetTG7065OResponse;
+import io.spring.guides.gs_producing_web_service.TG7065I;
+import io.spring.guides.gs_producing_web_service.TG7065O;
+
+
+@Endpoint
+public class CountryEndpoint {
+	private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
+
+		
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getTG7065IRequest")
+	@ResponsePayload
+	public GetTG7065OResponse getCountry(@RequestPayload GetTG7065IRequest request) {
+		GetTG7065OResponse response = new GetTG7065OResponse();
+		
+		
+    	response.setTG7065O(crearRespesta());
+    	prosesarRequest(request.getTG7065I());
+    	
+        return response;
+    }
+    
+	
+    public void prosesarRequest(TG7065I request) {
+    	if(request !=null) {
+    		System.out.println("CODENTID: "+request.getCODENTID());
+    		System.out.println("NIF: "+request.getNIF());
+    		System.out.println("NUMPERSONA: "+request.getNUMPERSONA());
+    		System.out.println("NUMOPERA: "+request.getNUMOPERA());
+    		System.out.println("OPCION: "+request.getOPCION());
+    	}else {
+    		System.out.println("Vacio....");
+    	}
+    }
+    
+    
+    public List<TG7065O> crearRespesta(){
+    	List<TG7065O> list = new ArrayList<TG7065O>();
+    	
+    	TG7065O obj1 = new TG7065O();
+    	TG7065O obj2 = new TG7065O();
+    	    	
+    	list.add(crear(obj1,1));
+    	list.add(crear(obj2,2));
+    	
+    	
+    	return list;
+    }
+    
+    public TG7065O crear(TG7065O obj1, int sec) {
+    	
+    	obj1.setCODIDIVI("CODIDIVI response "+sec);
+    	obj1.setCODPROOP("CODPROOP Response "+sec);
+    	obj1.setDESPRODO("DESPRODO response "+sec);
+    	obj1.setDIVNOMVEN("DIVNOMVEN response "+sec);
+    	obj1.setDIVPRIMA("DIVPRIMA response "+sec);
+    	obj1.setFECALTA("FECALTA response "+sec);
+    	obj1.setFECVTO("FECVTO response "+sec);
+    	obj1.setGLOBALID("GLOBALID response "+sec);
+    	obj1.setIMPNOMINAL("IMPNOMINAL response "+sec);
+    	obj1.setIMPNOMVEN("IMPNOMVEN response "+sec);
+    	obj1.setIMPPRIMA("IMPPRIMA response "+sec);
+    	obj1.setINDCALPUT("INDCALPUT response "+sec);
+    	obj1.setINDCOMP("INDCOMP response "+sec);
+    	obj1.setNIVBARR1("NIVBARR1 response "+sec);
+    	obj1.setNIVBARR2("NIVBARR2 response "+sec);
+    	obj1.setNUMESTRAT("NUMESTRAT response "+sec);
+    	obj1.setNUMOPERA("NUMOPERA response "+sec);
+    	obj1.setTIPBARR1("TIPBARR1 response "+sec);
+    	obj1.setTIPBARR2("TIPBARR2 response "+sec);
+    	obj1.setTRANOPE("TRANOPE response "+sec);
+    	
+    	return obj1;
+    }
+}
